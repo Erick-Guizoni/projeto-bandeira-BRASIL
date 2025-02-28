@@ -1,0 +1,83 @@
+:root {
+    --green: #009735;
+    --yellow: #f6d900;
+    --blue: #1651b8;
+    --white: #ffffff;
+}
+
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ body {
+    align-items: center;
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+ }
+
+ .bandeira {
+    background-color: var(--green);
+    height: 350px;
+    position: relative;
+    width: 500px;
+ }
+
+ .losango:before,
+ .losango:after {
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    content: "";
+    position: absolute;
+ }
+
+ .losango:before {
+    border-bottom: 150px solid var(--yellow);
+    top: 25px;
+ }
+
+ .losango:after {
+    border-top: 150px solid var(--yellow);
+    bottom: 25px;
+ }
+
+  .circulo {
+    background-color: var(--blue);
+    border-radius: 50%;
+    height: 150px;
+    left: 125px;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    width: 150px;
+ }
+
+ .circulo:before,
+ .circulo:after {
+    border-radius: 50%;
+    content: "";
+    height: 75px;
+    position: absolute;
+    transform: rotate(15deg);
+    top: 65px;
+    width: 170px;
+ }
+
+  .circulo:before {
+    background-color: var(--white);
+    margin-left: -5px;
+    margin-top: -20px;
+  }
+
+  .circulo:after {
+    background-color: var(--blue);
+    margin-left: -6px;
+    margin-top: -5px;
+  }
